@@ -1,6 +1,6 @@
 module main
 
-go 1.17
+go 1.23.3
 
 require (
 	github.com/envoyproxy/go-control-plane v0.12.0
