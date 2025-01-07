@@ -54,7 +54,7 @@ func (s *server) SayHelloStream(in *echo.EchoRequest, stream echo.EchoServer_Say
 func main() {
 	flag.Parse()
 
-	greeterPort := fmt.Sprintf(":%d", *port)
+	greeterPort := fmt.Sprintf("127.0.0.1:%d", *port)
 	greeterLis, err := net.Listen("tcp4", greeterPort)
 	if err != nil {
 		log.Fatalf("net.Listen(tcp4, %q) failed: %v", greeterPort, err)
@@ -75,7 +75,7 @@ func main() {
 	}
 	echo.RegisterEchoServerServer(greeterServer, &server{serverName: determineHostname()})
 
-	healthPort := fmt.Sprintf(":%d", *port+1)
+	healthPort := fmt.Sprintf("127.0.0.1:%d", *port+1)
 	healthLis, err := net.Listen("tcp4", healthPort)
 	if err != nil {
 		log.Fatalf("net.Listen(tcp4, %q) failed: %v", healthPort, err)

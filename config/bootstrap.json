@@ -10,9 +10,5 @@
         "server_features": ["xds_v3"]      
       }
     ],
-    "node": {
-      "id": "node123",
-      "cluster": "test-cluster"
-    },
     "server_listener_resource_name_template": "grpc/server?xds.resource.listening_address=%s"
   }
