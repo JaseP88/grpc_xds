@@ -1,3 +1,8 @@
+```
+protoc --go_out=. --go_opt=paths=source_relative --go-grpc_out=. --go-grpc_opt=paths=source_relative echo.proto
+```
+
+________
 # gRPC xDS Loadbalancing
 
 Sample gRPC client/server application using  [xDS-Based Global Load Balancing](https://godoc.org/google.golang.org/grpc/xds)
